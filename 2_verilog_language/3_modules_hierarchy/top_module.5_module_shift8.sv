@@ -25,10 +25,11 @@ module top_module (
 
   always_comb begin : four_to_one_mux
     case (sel)
+      2'h0: q = d;
       2'h1: q = q1;
       2'h2: q = q2;
       2'h3: q = q3;
-      default: q = d;
+      default: q = {8{1'bx}};
     endcase
   end
 
