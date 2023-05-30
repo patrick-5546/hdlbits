@@ -13,6 +13,7 @@ module top_module (
   // Using a generate-for loop
   // Notes:
   // - Quartus requires a generate-for loop to have a named begin-end block attached
+  // - Use generate statements over for loop when there are module instantiations
   generate
     genvar i;
     for (i = 0; i <= 7; i = i + 1) begin : g_vectorr
